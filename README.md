@@ -4,7 +4,8 @@ This is a [lnav](http://lnav.org/) [format
 file](https://lnav.readthedocs.io/en/latest/formats.html) for the
 `/var/log/xensource.log` log file on [XenServer](http://xenserver.org/). It is
 written for the log format of the "trunk" (latest development) version of
-[xapi](https://xapi-project.github.io/), and for the latest version of lnav.
+[xapi](https://xapi-project.github.io/), and for the latest (0.8) version of
+lnav.
 
 ## Installing the format file
 
