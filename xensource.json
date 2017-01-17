@@ -2,7 +2,7 @@
   "xensource_log" : {
     "title" : "xensource.log",
     "description" : "XenServer logs stored in /var/log/xensource.log",
-    "url" : "TODO - point to a public page that describes the format of xensource.log",
+    "url" : "https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110",
     "file-pattern" : ".*/xensource.log",
     "regex" : {
       "xensource_log" : {

@@ -12,6 +12,13 @@ Clone this repo in the directory where the lnav format files are stored
 (`~/.lnav/formats/`), or follow the [installation instructions in the lnav
 documentation](https://lnav.readthedocs.io/en/latest/formats.html#installing-formats).
 
+## The log format of xapi
+
+The function formatting the log messages of xapi is the [`format`
+function](https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110),
+found in the `lib` directory of the [xcp-idl
+repository](https://github.com/xapi-project/xcp-idl).
+
 ## Testing the PCRE regex
 
 The following tools can be used to test the [PCRE](http://pcre.org/) regexes
