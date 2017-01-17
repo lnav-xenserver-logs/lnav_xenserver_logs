@@ -6,7 +6,7 @@
     "file-pattern" : ".*/xensource.log",
     "regex" : {
       "xensource_log" : {
-        "pattern" : "^(?<timestamp>\\w{3}\\s+\\d{1,2} \\d{2}:\\d{2}:\\d{2}) (?<log_hostname>[a-zA-Z0-9:][^ ]+[a-zA-Z0-9]) (?<log_procname>[^:]+):( message repeated \\d+ times:)? \\[(?<level>[^\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]]+)\\]( (?<body>.*))?$",
+        "pattern" : "^(?<timestamp>\\w{3}\\s+\\d{1,2} \\d{2}:\\d{2}:\\d{2}) (?<log_hostname>[a-zA-Z0-9:][^ ]+[a-zA-Z0-9]) (?<log_procname>[^:]+):( message repeated \\d+ times:)? \\[((?<xapi_timestamp>[^\\|]+)\\|)?(?<level>[^\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]]+)\\]( (?<body>.*))?$",
         "module-format" : false
       }
     },
@@ -33,6 +33,10 @@
       "log_procname" : {
         "kind" : "string",
         "identifier" : true
+      },
+      "xapi_timestamp" : {
+        "kind" : "string",
+        "identifier" : false
       },
       "xapi_hostname" : {
         "kind" : "string",
