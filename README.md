@@ -1,11 +1,18 @@
-# xensource.log format file for lnav
+# lnav format file for XenServer logs
 
 This is a [lnav](http://lnav.org/) [format
-file](https://lnav.readthedocs.io/en/latest/formats.html) for the
-`/var/log/xensource.log` log file on [XenServer](http://xenserver.org/). It is
-written for the log format of the "trunk" (latest development) version of
+file](https://lnav.readthedocs.io/en/latest/formats.html) for the log files on
+[XenServer](http://xenserver.org/). It is written for the log format of the
+"trunk" (latest development) version of
 [xapi](https://xapi-project.github.io/), and for the latest (0.8) version of
 lnav.
+
+It currently supports the following log files on a XenServer host:
+
+- /var/log/xensource.log
+- /var/log/audit.log
+
+(And of course, it supports the rotated versions of these log files as well.)
 
 ## Installing the format file
 
