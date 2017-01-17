@@ -10,7 +10,8 @@ lnav.
 ## Installing the format file
 
 Clone this repo in the directory where the lnav format files are stored
-(`~/.lnav/formats/`), or follow the [installation instructions in the lnav
+(`~/.lnav/formats/`) and checkout this branch with `git`, or follow the
+[installation instructions in the lnav
 documentation](https://github.com/tstack/lnav/blob/v0.7.3/docs/source/formats.rst#installing-formats).
 
 ## The log format of xapi
