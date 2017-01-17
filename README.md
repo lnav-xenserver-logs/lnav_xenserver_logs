@@ -8,9 +8,10 @@ written for the log format of the "trunk" (latest development) version of
 
 ## Installing the format file
 
-Clone this repo in the directory where the lnav format files are stored
-(`~/.lnav/formats/`), or follow the [installation instructions in the lnav
+Follow the [installation instructions in the lnav
 documentation](https://lnav.readthedocs.io/en/latest/formats.html#installing-formats).
+The easiest method is to install the format file from this git repository using
+the `-i` option, as explained in the documentation.
 
 ## The log format of xapi
 
