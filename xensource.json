@@ -6,8 +6,7 @@
     "file-pattern" : ".*\\/(xensource|audit)\\.log(\\..+)?",
     "regex" : {
       "xensource_log" : {
-        "pattern" : "^(?<timestamp>\\w{3}\\s+\\d{1,2} \\d{2}:\\d{2}:\\d{2}) (?<log_hostname>[a-zA-Z0-9:][^ ]+[a-zA-Z0-9]) (?<log_procname>[^:]+):( message repeated \\d+ times:)? \\[((?<xapi_timestamp>[^\\|]+)\\|)?(?<level>[^\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]]+)\\]( (?<body>.*))?$",
-        "module-format" : false
+        "pattern" : "^(?<timestamp>\\w{3}\\s+\\d{1,2} \\d{2}:\\d{2}:\\d{2}) (?<log_hostname>[a-zA-Z0-9:][^ ]+[a-zA-Z0-9]) (?<log_procname>[^:]+):( message repeated \\d+ times:)? \\[((?<xapi_timestamp>[^\\|]+)\\|)?(?<level>[^\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]]+)\\]( (?<body>.*))?$"
       }
     },
     "json" : false,
@@ -15,7 +14,6 @@
     "timestamp-field" : "timestamp",
     "level-field" : "level",
     "body-field" : "body",
-    "opid-field" : "task",
 
     "level" : {
       "error" : "error",
@@ -23,7 +21,6 @@
       "info" : "info",
       "debug" : "debug"
     },
-    "multiline" : false,
     "value" : {
       "log_hostname" : {
         "kind" : "string",
