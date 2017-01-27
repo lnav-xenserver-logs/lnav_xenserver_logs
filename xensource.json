@@ -6,13 +6,12 @@
     "file-pattern" : ".*\\/(xensource|audit)\\.log(\\..+)?",
     "regex" : {
       "xensource_log" : {
-        "pattern" : "^(?<timestamp>\\w{3}\\s+\\d{1,2} \\d{2}:\\d{2}:\\d{2}) (?<log_hostname>[a-zA-Z0-9:][^ ]+[a-zA-Z0-9]) (?<log_procname>[^:]+):( message repeated \\d+ times:)? \\[((?<xapi_timestamp>[^\\|]+)\\|)?(?<level>[^\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]]+)\\]( (?<body>.*))?$",
-        "module-format" : false
+        "pattern" : "\\[((?<xapi_timestamp>[^\\|]+)\\|)?(?<level>[^\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]]+)\\]( (?<body>.*))?",
+        "module-format" : true
       }
     },
     "json" : false,
 
-    "timestamp-field" : "timestamp",
     "level-field" : "level",
     "body-field" : "body",
     "opid-field" : "task",
@@ -25,15 +24,6 @@
     },
     "multiline" : false,
     "value" : {
-      "log_hostname" : {
-        "kind" : "string",
-        "collate" : "ipaddress",
-        "identifier" : true
-      },
-      "log_procname" : {
-        "kind" : "string",
-        "identifier" : true
-      },
       "xapi_timestamp" : {
         "kind" : "string",
         "identifier" : false
@@ -63,7 +53,7 @@
     },
     "sample" : [
       {
-        "line" : "Jan 13 01:27:56 dt14 xapi: [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs"
+        "line" : " [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs"
       }
     ]
   }
