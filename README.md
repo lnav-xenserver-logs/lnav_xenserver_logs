@@ -5,7 +5,7 @@ file](https://github.com/tstack/lnav/blob/v0.7.3/docs/source/formats.rst) for
 the log files on [XenServer](http://xenserver.org/). It is written for the log
 format of the "trunk" (latest development) version of
 [xapi](https://xapi-project.github.io/), and for the older, 0.7.x releases of
-lnav.
+lnav. To check which version of lnav is installed, run `lnav -V`.
 
 It currently supports the following log files on a XenServer host:
 
