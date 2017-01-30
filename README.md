@@ -5,7 +5,7 @@ file](https://lnav.readthedocs.io/en/latest/formats.html) for the log files on
 [XenServer](http://xenserver.org/). It is written for the log format of the
 "trunk" (latest development) version of
 [xapi](https://xapi-project.github.io/), and for the latest (0.8) version of
-lnav.
+lnav. To check which version of lnav is installed, run `lnav -V`.
 
 It currently supports the following log files on a XenServer host:
 
