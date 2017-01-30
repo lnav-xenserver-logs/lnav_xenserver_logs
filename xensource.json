@@ -3,7 +3,7 @@
     "title" : "xensource.log",
     "description" : "XenServer logs stored in /var/log/xensource.log",
     "url" : "https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110",
-    "file-pattern" : ".*\\/(xensource|audit)\\.log(\\..+)?",
+    "file-pattern" : ".*\\/(xensource|audit|daemon)\\.log(\\..+)?",
     "regex" : {
       "xensource_log" : {
         "pattern" : "\\[((?<xapi_timestamp>[^\\|]+)\\|)?(?<level>[^\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]]+)\\]( (?<body>.*))?",
