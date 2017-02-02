@@ -55,7 +55,7 @@
       },
       "module" : {
         "kind" : "string",
-        "identifier" : false
+        "identifier" : true
       }
     },
     "sample" : [
