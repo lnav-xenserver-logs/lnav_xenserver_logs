@@ -4,8 +4,4 @@ sudo: true
 install:
   - sudo apt-get update -qq
   - sudo apt-get install jq pcregrep
-  - jq .xensource_log.regex.xensource_log.pattern xensource.json | sed 's/\\\\/\\/g' | sed 's/^"\(.*\)"$/\1/' | tee /tmp/pattern
-script:
-  - pcregrep --quiet --file=/tmp/pattern test/test_match/xensource.log
-  - not pcregrep --file=/tmp/pattern --invert-match test/test_match/xensource.log
-  - set -e && for group in $(cat test/test_captures/capturing_groups); do perl -pe "s/$(cat /tmp/pattern)/\$+{$group}/" < test/test_captures/xensource.log > /tmp/output && diff test/test_captures/expected_matches/$group /tmp/output; done
+script: bash test.sh
