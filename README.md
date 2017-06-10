@@ -1,4 +1,5 @@
 # lnav format file for XenServer logs
+[![Build Status](https://travis-ci.org/gaborigloi/lnav_xenserver_logs.svg?branch=lnav_0.7)](https://travis-ci.org/gaborigloi/lnav_xenserver_logs)
 
 This is a [lnav](http://lnav.org/) [format
 file](https://github.com/tstack/lnav/blob/v0.7.3/docs/source/formats.rst) for

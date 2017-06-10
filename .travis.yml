@@ -1,0 +1,10 @@
+language: c
+dist: trusty
+sudo: true
+install:
+  - sudo apt-get update -qq
+  - sudo apt-get install jq pcregrep
+  - jq .xensource_log.regex.xensource_log.pattern xensource.json | sed 's/\\\\/\\/g' | sed 's/^"\(.*\)"$/\1/' | tee /tmp/pattern
+script:
+  - pcregrep --file=/tmp/pattern test/xensource.log
+  - not pcregrep --file=/tmp/pattern --invert-match test/xensource.log

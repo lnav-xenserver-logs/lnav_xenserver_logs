@@ -1,0 +1,55 @@
+Jun 10 13:32:30 jupiter xapi: [debug|jupiter|85 |session_revalidation_func D:b8abf662d7de|xapi] revalidating all external sessions in the local host
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|4 |events|xenops_server] Received an event on managed VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|4 |queue|xenops_server] Queue.push ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"] onto ff873854-f195-d32b-1105-c6e0dfe850f0:[  ]
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|17 ||xenops_server] Queue.pop returned ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|17 |events|xenops_server] Task 1808 reference events: ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|17 |events|xenops_server] VM ff873854-f195-d32b-1105-c6e0dfe850f0 is not requesting any attention
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|17 |events|xenops_server] VM_DB.signal ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|17 |events|task_server] Task 1808 completed; duration = 0
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|17 ||xenops_server] TASK.signal 1808 (object deleted)
+Jun 10 13:32:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] Processing event: ["Vm", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:32:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenops event on VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:32:31 jupiter xenopsd-xc: [debug|localhost|3821 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops_server] VM.stat ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:32:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenopsd event: processing event for VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:32:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] Supressing VM.allowed_operations update because guest_agent data is largely the same
+Jun 10 13:32:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenopsd event: Updating VM ff873854-f195-d32b-1105-c6e0dfe850f0 domid 4 guest_agent
+Jun 10 13:32:40 jupiter xapi: [debug|jupiter|9470 ||mscgen] xapi=>xapi [label="event.from"];
+Jun 10 13:32:40 jupiter xapi: [debug|jupiter|9471 UNIX /var/lib/xcp/xapi||dummytaskhelper] task dispatch:event.from D:1e95315e2423 created by task D:6ff794f713fd
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|4 |events|xenops_server] Received an event on managed VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|4 |queue|xenops_server] Queue.push ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"] onto ff873854-f195-d32b-1105-c6e0dfe850f0:[  ]
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|37 ||xenops_server] Queue.pop returned ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|37 |events|xenops_server] Task 1809 reference events: ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|37 |events|xenops_server] VM ff873854-f195-d32b-1105-c6e0dfe850f0 is not requesting any attention
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|37 |events|xenops_server] VM_DB.signal ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|37 |events|task_server] Task 1809 completed; duration = 0
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|37 ||xenops_server] TASK.signal 1809 (object deleted)
+Jun 10 13:33:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] Processing event: ["Vm", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:33:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenops event on VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:33:31 jupiter xenopsd-xc: [debug|localhost|3823 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops_server] VM.stat ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:33:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenopsd event: processing event for VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:33:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] Supressing VM.allowed_operations update because guest_agent data is largely the same
+Jun 10 13:33:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenopsd event: Updating VM ff873854-f195-d32b-1105-c6e0dfe850f0 domid 4 guest_agent
+Jun 10 13:33:41 jupiter xapi: [debug|jupiter|9474 ||mscgen] xapi=>xapi [label="event.from"];
+Jun 10 13:33:41 jupiter xapi: [debug|jupiter|9475 UNIX /var/lib/xcp/xapi||dummytaskhelper] task dispatch:event.from D:50a640608666 created by task D:6ff794f713fd
+Jun 10 13:34:20 jupiter xapi: [debug|jupiter|33 dbflush [/var/lib/xcp/state.db]||sql] XML backend [/var/lib/xcp/state.db] -- Write buffer flushed. Time: 0.058940
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|4 |events|xenops_server] Received an event on managed VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|4 |queue|xenops_server] Queue.push ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"] onto ff873854-f195-d32b-1105-c6e0dfe850f0:[  ]
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|21 ||xenops_server] Queue.pop returned ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|21 |events|xenops_server] Task 1810 reference events: ["VM_check_state", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|21 |events|xenops_server] VM ff873854-f195-d32b-1105-c6e0dfe850f0 is not requesting any attention
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|21 |events|xenops_server] VM_DB.signal ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|21 |events|task_server] Task 1810 completed; duration = 0
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|21 ||xenops_server] TASK.signal 1810 (object deleted)
+Jun 10 13:34:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] Processing event: ["Vm", "ff873854-f195-d32b-1105-c6e0dfe850f0"]
+Jun 10 13:34:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenops event on VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:34:31 jupiter xenopsd-xc: [debug|localhost|3825 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops_server] VM.stat ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:34:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenopsd event: processing event for VM ff873854-f195-d32b-1105-c6e0dfe850f0
+Jun 10 13:34:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] Supressing VM.allowed_operations update because guest_agent data is largely the same
+Jun 10 13:34:31 jupiter xapi: [debug|jupiter|151 |org.xen.xapi.xenops.classic events D:041d25ebe9d8|xenops] xenopsd event: Updating VM ff873854-f195-d32b-1105-c6e0dfe850f0 domid 4 guest_agent
+Jun 10 13:34:41 jupiter xapi: [debug|jupiter|9476 ||mscgen] xapi=>xapi [label="event.from"];
+Jun 10 13:34:41 jupiter xapi: [debug|jupiter|9477 UNIX /var/lib/xcp/xapi||dummytaskhelper] task dispatch:event.from D:86d8d6477bb1 created by task D:6ff794f713fd
+Jun 10 13:35:15 jupiter xapi: [debug|jupiter|9480 INET :::80|Get RRD updates. D:015d88fdc95b|xapi] hand_over_connection GET /rrd_updates to /var/lib/xcp/xcp-rrdd.forwarded
+Jun 11 09:46:12 localhost xenopsd-xc: message repeated 2 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]
+Jun 11 09:46:12 localhost xenopsd-xc: [debug|localhost|6 ||xenstore_watch] xenstore watch path=/local/domain/0/attr token=xenopsd-xc:domain-0
+Jun 11 09:46:12 localhost xenopsd-xc: [debug|localhost|0 ||xenops_server] Addinga new worker to the thread pool
+Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]
