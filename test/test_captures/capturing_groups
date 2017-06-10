@@ -1,0 +1,10 @@
+timestamp
+log_hostname
+log_procname
+level
+xapi_hostname
+threadid
+origin
+task
+module
+body
