@@ -61,6 +61,9 @@
     "sample" : [
       {
         "line" : "Jan 13 01:27:56 dt14 xapi: [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs"
+      },
+      {
+        "line" : "Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]"
       }
     ]
   }
