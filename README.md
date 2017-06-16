@@ -22,14 +22,16 @@ Clone this repo in the directory where the lnav format files are stored
 [installation instructions in the lnav
 documentation](https://github.com/tstack/lnav/blob/v0.7.3/docs/source/formats.rst#installing-formats).
 
-## The log format of xapi
+## Contributing
+
+### The log format of xapi
 
 The function formatting the log messages of xapi is the [`format`
 function](https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110),
 found in the `lib` directory of the [xcp-idl
 repository](https://github.com/xapi-project/xcp-idl).
 
-## Testing the PCRE regex
+### Testing the PCRE regex
 
 The following tools can be used to test the [PCRE](http://pcre.org/) regexes
 (Perl Compatible Regular Expressions) in the format file. Bear in mind that
@@ -49,6 +51,17 @@ written there instead of one.
 
    For the emitted non-matching lines, go back to step 1. and amend the regex
    until it matches the line, then repeat the procedure.
+
+### Travis tests
+
+The Travis tests use the above method to test the regex in the format file with
+`pcregrep` - if the regex does not match all lines of the well-formatted
+`xensource.log` test file in the `test/test_match/` directory, then the build
+fails.
+
+There is also a second test, which uses perl itself, and checks that the regex
+correctly extracts each field of the log lines in the `xensource.log` test file
+found in the `test/test_captures/` directory.
 
 ## License
 
