@@ -9,4 +9,4 @@ install:
   - lnav-0.8.0/lnav -i xensource.json
 script:
   - lnav-0.8.0/lnav -C
-  - (! (lnav-0.8.2/lnav -C 2> /tmp/e && grep "^warning:" /tmp/e))
+  - (! (lnav-0.8.2/lnav |& grep "^warning:"))
