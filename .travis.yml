@@ -3,7 +3,6 @@ sudo: false
 install:
   - wget https://github.com/tstack/lnav/releases/download/v0.8.0/lnav-0.8.0-linux-64bit.zip
   - unzip lnav-0.8.0-linux-64bit.zip
-  - mkdir -p ~/.lnav/formats/xenserver
-  - mv xensource.json ~/.lnav/formats/xenserver/
+  - lnav-0.8.0/lnav -i xensource.json
 script:
   - lnav-0.8.0/lnav -C
