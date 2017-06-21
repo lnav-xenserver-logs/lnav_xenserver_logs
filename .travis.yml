@@ -1,8 +1,12 @@
 language: c
+dist: trusty
 sudo: false
 install:
   - wget https://github.com/tstack/lnav/releases/download/v0.8.0/lnav-0.8.0-linux-64bit.zip
   - unzip lnav-0.8.0-linux-64bit.zip
+  - wget https://github.com/tstack/lnav/releases/download/v0.8.2/lnav-0.8.2-linux-64bit.zip
+  - unzip lnav-0.8.2-linux-64bit.zip
   - lnav-0.8.0/lnav -i xensource.json
 script:
   - lnav-0.8.0/lnav -C
+  - (! (lnav-0.8.2/lnav -C 2> /tmp/e && grep "^warning:" /tmp/e))
