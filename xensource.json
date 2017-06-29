@@ -14,7 +14,7 @@
 
     "level-field" : "level",
     "body-field" : "body",
-    "opid-field" : "task",
+    "opd-field" : "task",
 
     "level" : {
       "error" : "error",
