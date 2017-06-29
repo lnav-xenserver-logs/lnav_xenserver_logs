@@ -1,6 +1,7 @@
 timestamp
 log_hostname
 log_procname
+xapi_timestamp
 level
 xapi_hostname
 threadid
