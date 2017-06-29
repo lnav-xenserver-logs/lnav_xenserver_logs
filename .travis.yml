@@ -8,5 +8,5 @@ install:
   - unzip lnav-0.8.2-linux-64bit.zip
   - lnav-0.8.0/lnav -i xensource.json
 script:
-  - lnav-0.8.0/lnav -C
-  - (! (lnav-0.8.2/lnav |& grep "^warning:"))
+  - env PATH="./lnav-0.8.0:$PATH" bash -uex test.sh
+  - env PATH="./lnav-0.8.2:$PATH" bash -uex test.sh
