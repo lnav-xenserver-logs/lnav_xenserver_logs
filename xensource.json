@@ -1,5 +1,5 @@
 {
-  "xensource_log" : {
+  "xensource_log_module_format" : {
     "title" : "xensource.log",
     "description" : "XenServer logs stored in /var/log/xensource.log",
     "url" : "https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110",
