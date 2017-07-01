@@ -6,7 +6,7 @@
     "file-pattern" : ".*\\/(xensource|audit|daemon)\\.log(\\..+)?",
     "regex" : {
       "xensource_log" : {
-        "pattern" : "\\[((?<xapi_timestamp>[^\\|]+)\\|)?(?<level>[^\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]]+)\\]( (?<body>.*))?",
+        "pattern" : "\\[((?<xapi_timestamp>[^\\[\\|]+)\\|)?(?<level>[^\\[\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]\\|]+)\\]( (?<body>.*))?",
         "module-format" : true
       }
     },
