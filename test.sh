@@ -11,5 +11,9 @@ test "$(lnav -V)" == "lnav 0.8.2" && \
 lnav -C
 
 # Test that the different fields are extracted correctly
-lnav -qn -c ';select xapi_timestamp,level,xapi_hostname,threadid,origin,task,module from xensource_log_module_format' -c ':write-csv-to /tmp/out.csv' ./test/test_captures/xensource.log
-diff /tmp/out.csv test/test_captures/expected_matches.csv
+# Test the main format
+lnav -qn -c ';select log_time,log_hostname,log_procname,xapi_timestamp,log_level,xapi_hostname,threadid,origin,task,module from xensource_log' -c ':write-csv-to /tmp/out.csv' ./test/test_captures/main_format/xensource.log
+diff /tmp/out.csv test/test_captures/main_format/expected_matches.csv
+# Test the module format
+lnav -qn -c ';select xapi_timestamp,level,xapi_hostname,threadid,origin,task,module from xensource_log_module_format' -c ':write-csv-to /tmp/out.csv' ./test/test_captures/module_format/syslog
+diff /tmp/out.csv test/test_captures/module_format/expected_matches.csv

@@ -1,0 +1,3 @@
+Jun 10 13:32:30 jupiter xapi: [debug|jupiter|85 |session_revalidation_func D:b8abf662d7de|xapi] revalidating all external sessions in the local host
+Jun 10 13:32:40 jupiter xapi: [debug|jupiter|9471 UNIX /var/lib/xcp/xapi||dummytaskhelper] task dispatch:event.from D:1e95315e2423 created by task D:6ff794f713fd
+Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]

@@ -1,9 +1,80 @@
 {
+  "xensource_log" : {
+    "title" : "xensource.log",
+    "description" : "XenServer logs stored in /var/log/xensource.log",
+    "url" : "https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110",
+    "file-pattern" : ".*\\/(xensource|audit)\\.log(\\..+)?",
+    "regex" : {
+      "xensource_log" : {
+        "pattern" : "^(?<timestamp>\\w{3}\\s+\\d{1,2} \\d{2}:\\d{2}:\\d{2}) (?<log_hostname>[a-zA-Z0-9:][^ ]+[a-zA-Z0-9]) (?<log_procname>[^:]+):( message repeated \\d+ times: \\[)? \\[((?<xapi_timestamp>[^\\[\\|]+)\\|)?(?<level>[^\\[\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]\\|]+)\\]( (?<body>.*))?$",
+        "module-format" : false
+      }
+    },
+    "json" : false,
+
+    "timestamp-field" : "timestamp",
+    "level-field" : "level",
+    "body-field" : "body",
+    "opid-field" : "task",
+
+    "level" : {
+      "error" : "error",
+      "warning" : "warn",
+      "info" : "info",
+      "debug" : "debug"
+    },
+    "multiline" : false,
+    "value" : {
+      "log_hostname" : {
+        "kind" : "string",
+        "collate" : "ipaddress",
+        "identifier" : true
+      },
+      "log_procname" : {
+        "kind" : "string",
+        "identifier" : true
+      },
+      "xapi_timestamp" : {
+        "kind" : "string",
+        "identifier" : false
+      },
+      "xapi_hostname" : {
+        "kind" : "string",
+        "collate" : "ipaddress",
+        "identifier" : true
+      },
+      "threadid" : {
+        "kind" : "integer",
+        "identifier" : true,
+        "foreign-key" : true
+      },
+      "origin" : {
+        "kind" : "string",
+        "identifier" : false
+      },
+      "task" : {
+        "kind" : "string",
+        "identifier" : false
+      },
+      "module" : {
+        "kind" : "string",
+        "identifier" : true
+      }
+    },
+    "sample" : [
+      {
+        "line" : "Jan 13 01:27:56 dt14 xapi: [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs"
+      },
+      {
+        "line" : "Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]"
+      }
+    ]
+  },
   "xensource_log_module_format" : {
     "title" : "xensource.log",
     "description" : "XenServer logs stored in /var/log/xensource.log",
     "url" : "https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110",
-    "file-pattern" : ".*\\/(xensource|audit|daemon)\\.log(\\..+)?",
+    "file-pattern" : ".*\\/((xensource|audit|daemon)\\.log|syslog)(\\..+)?",
     "regex" : {
       "xensource_log" : {
         "pattern" : "\\[((?<xapi_timestamp>[^\\[\\|]+)\\|)?(?<level>[^\\[\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]\\|]+)\\]( (?<body>.*))?",
@@ -57,12 +128,10 @@
     },
     "sample" : [
       {
-        "line" : " [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs",
-        "level" : "debug"
+        "line" : " [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs"
       },
       {
-        "line" : " message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]",
-        "level" : "debug"
+        "line" : " message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]"
       }
     ]
   }
