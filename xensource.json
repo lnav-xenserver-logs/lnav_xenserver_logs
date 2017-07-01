@@ -28,6 +28,10 @@
         "kind" : "string",
         "identifier" : false
       },
+      "level" : {
+        "kind" : "string",
+        "identifier" : false
+      },
       "xapi_hostname" : {
         "kind" : "string",
         "collate" : "ipaddress",
