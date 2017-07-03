@@ -63,10 +63,16 @@
     },
     "sample" : [
       {
-        "line" : "Jan 13 01:27:56 dt14 xapi: [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs"
+        "line" : "Jan 13 01:27:56 dt14 xapi: [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs",
+        "level" : "debug"
       },
       {
-        "line" : "Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]"
+        "line" : "Dec 20 17:52:52 localhost xapi: [ warn|xrtuk-11-33|178 INET :::80|VM metadata import R:a425c45b3556|import] Failed to find SR with UUID: d85ea3e9-92d4-d689-1644-1964801cb64c content-type: user - will still try to find individual VDIs",
+        "level" : "warning"
+      },
+      {
+        "line" : "Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]",
+        "level" : "debug"
       }
     ]
   },
