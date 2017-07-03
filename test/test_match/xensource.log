@@ -53,3 +53,5 @@ Jun 11 09:46:12 localhost xenopsd-xc: message repeated 2 times: [ [debug|localho
 Jun 11 09:46:12 localhost xenopsd-xc: [debug|localhost|6 ||xenstore_watch] xenstore watch path=/local/domain/0/attr token=xenopsd-xc:domain-0
 Jun 11 09:46:12 localhost xenopsd-xc: [debug|localhost|0 ||xenops_server] Addinga new worker to the thread pool
 Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]
+Jun 12 17:52:52 localhost xapi: [ warn|jupiter|178 INET :::80|VM metadata import R:a425c45b3556|import] Failed to find SR with UUID: d85ea3e9-92d4-d689-1644-1964801cb64c content-type: user - will still try to find individual VDIs
+Jun 13 17:52:52 localhost xapi: [error|jupiter|178 INET :::80|VM metadata import R:a425c45b3556|import] Found no VDI with location = 5995f2c5-e6e5-4fda-97a2-49d5658b9269: treating as fatal and abandoning import

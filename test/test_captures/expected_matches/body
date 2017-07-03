@@ -1,3 +1,4 @@
 revalidating all external sessions in the local host
 task dispatch:event.from D:1e95315e2423 created by task D:6ff794f713fd
 Adding a new worker to the thread pool]
+Failed to find SR with UUID: d85ea3e9-92d4-d689-1644-1964801cb64c content-type: user - will still try to find individual VDIs

@@ -1,3 +1,4 @@
 Jun 10 13:32:30 jupiter xapi: [debug|jupiter|85 |session_revalidation_func D:b8abf662d7de|xapi] revalidating all external sessions in the local host
 Jun 10 13:32:40 jupiter xapi: [debug|jupiter|9471 UNIX /var/lib/xcp/xapi||dummytaskhelper] task dispatch:event.from D:1e95315e2423 created by task D:6ff794f713fd
 Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]
+Jun 12 17:52:52 localhost xapi: [ warn|jupiter|178 INET :::80|VM metadata import R:a425c45b3556|import] Failed to find SR with UUID: d85ea3e9-92d4-d689-1644-1964801cb64c content-type: user - will still try to find individual VDIs
