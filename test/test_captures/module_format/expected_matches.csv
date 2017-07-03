@@ -2,3 +2,4 @@ xapi_timestamp,level,xapi_hostname,threadid,origin,task,module
 <NULL>,debug,jupiter,85,<NULL>,session_revalidation_func D:b8abf662d7de,xapi
 <NULL>,debug,jupiter,9471,UNIX /var/lib/xcp/xapi,<NULL>,dummytaskhelper
 <NULL>,debug,localhost,0,<NULL>,<NULL>,xenops_server
+<NULL>, warn,jupiter,178,INET :::80,VM metadata import R:a425c45b3556,import
