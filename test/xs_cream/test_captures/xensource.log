@@ -1,0 +1,4 @@
+Jul 11 14:36:23 localhost xapi: [ info|jupiter|1988 INET 0.0.0.0:80|session.logout D:bf1d54573d44|xapi] Session.destroy trackid=87b722e794147f315f8ae5484f3e3c25
+Jul 11 14:40:55 localhost xenopsd: [debug|jupiter|7||xenops] TASK.signal 120 (object deleted)
+Jul 11 14:40:55 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|mscgen] xapi=>xenops [label="VM.stat"];
+Jul 11 14:40:59 localhost xapi: [debug|jupiter|2004 UNIX /var/xapi/xapi||dummytaskhelper] task dispatch:event.from D:b463b0fb3c3d created by task D:0f186d8d3b1c

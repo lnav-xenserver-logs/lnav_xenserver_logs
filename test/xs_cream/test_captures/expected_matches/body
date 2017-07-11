@@ -1,0 +1,4 @@
+Session.destroy trackid=87b722e794147f315f8ae5484f3e3c25
+TASK.signal 120 (object deleted)
+xapi=>xenops [label="VM.stat"];
+task dispatch:event.from D:b463b0fb3c3d created by task D:0f186d8d3b1c

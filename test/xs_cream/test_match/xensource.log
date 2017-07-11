@@ -1,0 +1,55 @@
+Jul 11 14:40:55 localhost xenopsd: [debug|jupiter|7|events|xenops] VM_DB.signal b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:40:55 localhost xenopsd: [debug|jupiter|7|events|xenops] Task 120 completed; duration = 0
+Jul 11 14:40:55 localhost xenopsd: [debug|jupiter|7||xenops] TASK.signal 120 (object deleted)
+Jul 11 14:40:55 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] Processing event: ["Vm", "b83c7dde-b395-7cef-a476-2d045b2bff75"]
+Jul 11 14:40:55 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] xenops event on VM b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:40:55 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|mscgen] xapi=>xenops [label="VM.stat"];
+Jul 11 14:40:55 localhost xenopsd: [debug|jupiter|421|xenops events D:d87c1c0db24c|xenops] VM.stat b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:40:55 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] xenopsd event: processing event for VM b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:40:55 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] Supressing VM.allowed_operations update because guest_agent data is largely the same
+Jul 11 14:40:55 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] xenopsd event: Updating VM b83c7dde-b395-7cef-a476-2d045b2bff75 domid 4 guest_agent
+Jul 11 14:40:55 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|mscgen] xapi=>xenops [label="UPDATES.get"];
+Jul 11 14:40:59 localhost xapi: [debug|jupiter|2003||mscgen] xapi=>xapi [label="(XML)"];
+Jul 11 14:40:59 localhost xapi: [debug|jupiter|2004 UNIX /var/xapi/xapi||dummytaskhelper] task dispatch:event.from D:b463b0fb3c3d created by task D:0f186d8d3b1c
+Jul 11 14:41:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] system stats: MemTotal: 608992 KiB; MemFree: 68416 KiB; Buffered: 25476 KiB; Cached: 257192 KiB; SwapTotal: 524284 KiB; SwapFree: 524284 KiB
+Jul 11 14:41:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] Clock drift: 0
+Jul 11 14:41:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xcp-rrdd stats (n = 1): size: 73888 KiB; rss: 6616 KiB; data: 45572 KiB; stack: 136 KiB
+Jul 11 14:41:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xapi stats (n = 2): size: 437312 KiB; rss: 50344 KiB; data: 283900 KiB; stack: 272 KiB
+Jul 11 14:41:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xenopsd stats (n = 1): size: 277164 KiB; rss: 7168 KiB; data: 192688 KiB; stack: 136 KiB
+Jul 11 14:41:59 localhost xapi: [debug|jupiter|2007||mscgen] xapi=>xapi [label="(XML)"];
+Jul 11 14:41:59 localhost xapi: [debug|jupiter|2008 UNIX /var/xapi/xapi||dummytaskhelper] task dispatch:event.from D:67deac5a52de created by task D:0f186d8d3b1c
+Jul 11 14:42:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] system stats: MemTotal: 608992 KiB; MemFree: 68296 KiB; Buffered: 25572 KiB; Cached: 257192 KiB; SwapTotal: 524284 KiB; SwapFree: 524284 KiB
+Jul 11 14:42:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] Clock drift: 0
+Jul 11 14:42:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xcp-rrdd stats (n = 1): size: 73888 KiB; rss: 6616 KiB; data: 45572 KiB; stack: 136 KiB
+Jul 11 14:42:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xapi stats (n = 2): size: 429116 KiB; rss: 50320 KiB; data: 275704 KiB; stack: 272 KiB
+Jul 11 14:42:44 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xenopsd stats (n = 1): size: 277164 KiB; rss: 7168 KiB; data: 192688 KiB; stack: 136 KiB
+Jul 11 14:42:55 localhost xcp-rrdd: [debug|jupiter|3|xenstore|rrdd_main] memfree has changed to 1644284 in domain 4
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|1|events|xenops] Received an event on managed VM b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:42:56 localhost squeezed: [debug|jupiter|3|xenstore|xenops] watch /data/updated <- Tue Jul 11 14:42:55 UTC 2017
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|1|queue|xenops] Queue.push ["VM_check_state", "b83c7dde-b395-7cef-a476-2d045b2bff75"] onto b83c7dde-b395-7cef-a476-2d045b2bff75:[  ]
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|10||xenops] Queue.pop returned ["VM_check_state", "b83c7dde-b395-7cef-a476-2d045b2bff75"]
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|10|events|xenops] Task 121 reference events: ["VM_check_state", "b83c7dde-b395-7cef-a476-2d045b2bff75"]
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|10|events|xenops] VM b83c7dde-b395-7cef-a476-2d045b2bff75 is not requesting any attention
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|10|events|xenops] VM_DB.signal b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|10|events|xenops] Task 121 completed; duration = 0
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|10||xenops] TASK.signal 121 (object deleted)
+Jul 11 14:42:56 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] Processing event: ["Vm", "b83c7dde-b395-7cef-a476-2d045b2bff75"]
+Jul 11 14:42:56 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] xenops event on VM b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:42:56 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|mscgen] xapi=>xenops [label="VM.stat"];
+Jul 11 14:42:56 localhost xenopsd: [debug|jupiter|423|xenops events D:d87c1c0db24c|xenops] VM.stat b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:42:56 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] xenopsd event: processing event for VM b83c7dde-b395-7cef-a476-2d045b2bff75
+Jul 11 14:42:56 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] Supressing VM.allowed_operations update because guest_agent data is largely the same
+Jul 11 14:42:56 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|xenops] xenopsd event: Updating VM b83c7dde-b395-7cef-a476-2d045b2bff75 domid 4 guest_agent
+Jul 11 14:42:56 localhost xapi: [debug|jupiter|127|xenops events D:d87c1c0db24c|mscgen] xapi=>xenops [label="UPDATES.get"];
+Jul 11 14:43:00 localhost xapi: [debug|jupiter|2009||mscgen] xapi=>xapi [label="(XML)"];
+Jul 11 14:43:00 localhost xapi: [debug|jupiter|2010 UNIX /var/xapi/xapi||dummytaskhelper] task dispatch:event.from D:f99b0b26160c created by task D:0f186d8d3b1c
+Jul 11 14:43:45 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] system stats: MemTotal: 608992 KiB; MemFree: 68220 KiB; Buffered: 25668 KiB; Cached: 257192 KiB; SwapTotal: 524284 KiB; SwapFree: 524284 KiB
+Jul 11 14:43:45 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] Clock drift: 0
+Jul 11 14:43:45 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xcp-rrdd stats (n = 1): size: 73888 KiB; rss: 6616 KiB; data: 45572 KiB; stack: 136 KiB
+Jul 11 14:43:45 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xapi stats (n = 2): size: 429116 KiB; rss: 50320 KiB; data: 275704 KiB; stack: 272 KiB
+Jul 11 14:43:45 localhost xcp-rrdd: [debug|jupiter|0 monitor|main|rrdd_stats] xenopsd stats (n = 1): size: 277164 KiB; rss: 7168 KiB; data: 192688 KiB; stack: 136 KiB
+Jul 11 14:43:47 localhost xapi: [debug|jupiter|6 dbflush [/var/xapi/state.db]||sql] XML backend [/var/xapi/state.db] -- Write buffer flushed. Time: 0.063031
+Jul 11 14:44:01 localhost xapi: [debug|jupiter|2013||mscgen] xapi=>xapi [label="(XML)"];
+Jul 11 14:44:01 localhost xapi: [debug|jupiter|2014 UNIX /var/xapi/xapi||dummytaskhelper] task dispatch:event.from D:e56471572a45 created by task D:0f186d8d3b1c
+Jul 11 14:44:02 localhost xapi: [debug|jupiter|27|session_revalidation_func D:50eaf68e0d16|xapi] revalidating all external sessions in the local host
+Jul 11 14:44:14 localhost xapi: [debug|jupiter|2015 INET 0.0.0.0:80|Get RRD updates. D:63471c62bf8a|xapi] hand_over_connection GET /rrd_updates to /var/xapi/xcp-rrdd.forwarded
