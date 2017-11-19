@@ -6,7 +6,7 @@ set -uex
 
 # If we have the latest lnav version, check that there are no warnings
 test "$(lnav -V)" == "lnav 0.8.2" && \
-  (! (lnav-0.8.2/lnav |& grep "^warning:"))
+  (! (lnav -C |& grep "^warning:"))
 
 lnav -C
 
