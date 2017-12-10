@@ -22,27 +22,6 @@ documentation](https://lnav.readthedocs.io/en/latest/formats.html#installing-for
 The easiest method is to install the format file from this git repository using
 the `-i` option, as explained in the documentation.
 
-## Testing the PCRE regex
-
-The following tools can be used to test the [PCRE](http://pcre.org/) regexes
-(Perl Compatible Regular Expressions) in the format file. Bear in mind that
-some characters, including the "`\`" (backslash) character, have to be escaped
-in the strings in the `json` format file, so two backslashes ("`\\`") should be
-written there instead of one.
-
-1. The <https://regex101.com/> website is really useful for testing and writing
-   regular expressions. Copy the work-in-progress regex there, and a line to be
-   matched from `xensource.log`, and modify the regex until it matches.
-
-2. Then test with the
-   [`pcregrep`](http://www.rexegg.com/pcregrep-pcretest.html) tool, which is a
-   `grep` tool that uses PCRE regexes, that the regex matches every line in a
-   `xensource.log` file. By inverting the match, the `pcregrep -v <regex to be
-   tested>` command will output all the non-matching lines.
-
-   For the emitted non-matching lines, go back to step 1. and amend the regex
-   until it matches the line, then repeat the procedure.
-
 ## License
 
 This repo uses the same 2-Clause BSD License (or "Simplified BSD License" or "FreeBSD
