@@ -22,13 +22,6 @@ documentation](https://lnav.readthedocs.io/en/latest/formats.html#installing-for
 The easiest method is to install the format file from this git repository using
 the `-i` option, as explained in the documentation.
 
-## The log format of xapi
-
-The function formatting the log messages of xapi is the [`format`
-function](https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110),
-found in the `lib` directory of the [xcp-idl
-repository](https://github.com/xapi-project/xcp-idl).
-
 ## Testing the PCRE regex
 
 The following tools can be used to test the [PCRE](http://pcre.org/) regexes
