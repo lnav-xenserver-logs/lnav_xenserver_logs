@@ -24,33 +24,15 @@ documentation](https://github.com/tstack/lnav/blob/v0.7.3/docs/source/formats.rs
 
 ## Contributing
 
-### Testing the PCRE regex
-
-The following tools can be used to test the [PCRE](http://pcre.org/) regexes
-(Perl Compatible Regular Expressions) in the format file. Bear in mind that
-some characters, including the "`\`" (backslash) character, have to be escaped
-in the strings in the `json` format file, so two backslashes ("`\\`") should be
-written there instead of one.
-
-1. The <https://regex101.com/> website is really useful for testing and writing
-   regular expressions. Copy the work-in-progress regex there, and a line to be
-   matched from `xensource.log`, and modify the regex until it matches.
-
-2. Then test with the
-   [`pcregrep`](http://www.rexegg.com/pcregrep-pcretest.html) tool, which is a
-   `grep` tool that uses PCRE regexes, that the regex matches every line in a
-   `xensource.log` file. By inverting the match, the `pcregrep -v <regex to be
-   tested>` command will output all the non-matching lines.
-
-   For the emitted non-matching lines, go back to step 1. and amend the regex
-   until it matches the line, then repeat the procedure.
-
 ### Travis tests
 
-The Travis tests use the above method to test the regex in the format file with
-`pcregrep` - if the regex does not match all lines of the well-formatted
-`xensource.log` test file in the `test/test_match/` directory, then the build
-fails.
+The [`pcregrep`](http://www.rexegg.com/pcregrep-pcretest.html) tool is a `grep`
+tool that uses the same PCRE regexes as lnav format files. The Travis tests use
+this tool to verify that the regex in the format file matches every line in a
+`xensource.log` file. By inverting the match, the `pcregrep -v <regex to be
+tested>` command will output all the non-matching lines. If the regex does not
+match all lines of the well-formatted `xensource.log` test file in the
+`test/test_match/` directory, then the build fails.
 
 There is also a second test, which uses perl itself, and checks that the regex
 correctly extracts each field of the log lines in the `xensource.log` test file
