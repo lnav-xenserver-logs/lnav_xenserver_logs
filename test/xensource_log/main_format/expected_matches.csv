@@ -1,0 +1,5 @@
+log_time,log_hostname,log_procname,xapi_timestamp,log_level,xapi_hostname,threadid,origin,task,module
+2018-06-10 13:32:30.000,jupiter,xapi,<NULL>,debug,jupiter,85,<NULL>,session_revalidation_func D:b8abf662d7de,xapi
+2018-06-10 13:32:40.000,jupiter,xapi,<NULL>,debug,jupiter,9471,UNIX /var/lib/xcp/xapi,<NULL>,dummytaskhelper
+2018-06-11 09:46:12.000,localhost,xenopsd-xc,<NULL>,debug,localhost,0,<NULL>,<NULL>,xenops_server
+2018-06-12 17:52:52.000,localhost,xapi,<NULL>,warning,jupiter,178,INET :::80,VM metadata import R:a425c45b3556,import

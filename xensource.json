@@ -140,5 +140,43 @@
         "line" : " message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]"
       }
     ]
+  },
+  "xenrt_log" : {
+    "title" : "xenrt.log",
+    "description" : "XenRT log file",
+    "url" : "https://github.com/lnav-xenserver-logs/lnav_xenserver_logs",
+    "file-pattern" : "xenrt.log",
+    "regex" : {
+      "xenrt_log" : {
+        "pattern" : "^\\[(?<level>[^\\]\\[]+)\\] \\[(?<timestamp>[^\\[\\]]+)\\] (?<body>.*)",
+        "module-format" : false
+      }
+    },
+    "json" : false,
+
+    "timestamp-field" : "timestamp",
+    "level-field" : "level",
+    "body-field" : "body",
+
+    "level" : {
+      "error" : "REASON|REASONPLUS",
+      "warning" : "WARNING",
+      "stats" : "DELIMIT",
+      "info" : "TESTLOG",
+      "debug" : "VERBOSE"
+    },
+    "multiline" : true,
+    "sample" : [
+      {
+        "line" : "[VERBOSE] [2018-11-17 16:54:02 UTC] Setting MainThread TEC to TEC:TCCBTNBDBlockVerify",
+        "level" : "debug"
+      }
+    ],
+    "highlights" : {
+      "progress": {
+        "pattern": "\\[PROGRESS\\]",
+        "underline": true
+      }
+    }
   }
 }
