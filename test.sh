@@ -23,5 +23,5 @@ lnav -qn -c ';select xapi_timestamp,level,xapi_hostname,threadid,origin,task,mod
 diff /tmp/out.csv test/xensource_log/module_format/expected_matches.csv
 
 # Test xenrt.log
-lnav -qn -c ';select log_time,log_level,log_body from xenrt_log' -c ':write-csv-to /tmp/out.csv' ./test/xenrt_log/xenrt.log
+lnav -qn -c ';select log_time,log_level from xenrt_log' -c ':write-csv-to /tmp/out.csv' ./test/xenrt_log/xenrt.log
 diff /tmp/out.csv test/xenrt_log/expected_matches.csv
