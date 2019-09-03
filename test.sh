@@ -16,6 +16,9 @@ lnav -C
 
 # Test xensource.log
 # Test the main format
+# Update the modification time of the log file, to match the behaviour of Travis, where the file is always fresh,
+# because there is not year in this timestamp format so lnav figures out the date based on the file's timestamp.
+touch ./test/xensource_log/main_format/xensource.log
 lnav -qn -c ';select log_time,log_hostname,log_procname,xapi_timestamp,log_level,xapi_hostname,threadid,origin,task,module from xensource_log' -c ':write-csv-to /tmp/out.csv' ./test/xensource_log/main_format/xensource.log
 diff /tmp/out.csv test/xensource_log/main_format/expected_matches.csv
 # Test the module format
