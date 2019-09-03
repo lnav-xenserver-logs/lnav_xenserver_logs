@@ -164,8 +164,8 @@
       "error" : "REASON|REASONPLUS",
       "warning" : "WARNING",
       "stats" : "DELIMIT",
-      "info" : "TESTLOG",
-      "debug" : "VERBOSE"
+      "info" : "TESTLOG|STEP",
+      "debug" : "VERBOSE|HTCHECK"
     },
     "multiline" : true,
     "sample" : [
