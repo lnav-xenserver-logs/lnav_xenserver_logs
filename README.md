@@ -1,9 +1,9 @@
-# lnav format file for XenServer logs
+# lnav format file for Citrix Hypervisor (formerly XenServer) logs
 [![Build Status](https://travis-ci.org/lnav-xenserver-logs/lnav_xenserver_logs.svg?branch=master)](https://travis-ci.org/lnav-xenserver-logs/lnav_xenserver_logs)
 
 This is a [lnav](http://lnav.org/) [format
 file](https://lnav.readthedocs.io/en/latest/formats.html) for the log files on
-[XenServer](http://xenserver.org/). It is written for the log format of the
+[Citrix Hypervisor (formerly XenServer)](http://xenserver.org/). It is written for the log format of the
 "trunk" (latest development) version of
 [xapi](https://xapi-project.github.io/), and for the latest (0.8) version of
 lnav. To check which version of lnav is installed, run `lnav -V`.
