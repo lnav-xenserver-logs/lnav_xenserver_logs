@@ -6,7 +6,7 @@
     "file-pattern" : ".*\\/(xensource|audit)\\.log(\\..+)?",
     "regex" : {
       "xensource_log" : {
-        "pattern" : "^(?<timestamp>\\w{3}\\s+\\d{1,2} \\d{2}:\\d{2}:\\d{2}) (?<log_hostname>[a-zA-Z0-9:][^ ]+[a-zA-Z0-9]) (?<log_procname>[^:]+):( message repeated \\d+ times: \\[)? \\[((?<xapi_timestamp>[^\\[\\|]+)\\|)?(?<level>[^\\[\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]\\|]+)\\]( (?<body>.*))?$",
+        "pattern" : "^(?<timestamp>\\w{3}\\s+\\d{1,2} \\d{2}:\\d{2}:\\d{2}) (?<log_hostname>[a-zA-Z0-9:][^ ]+[a-zA-Z0-9]) (?<log_procname>[^:]+):( message repeated \\d+ times: \\[)? \\[((?<xapi_timestamp>[^\\[\\|]+)\\|)?(?<level>[^\\[\\|]+)\\|(?<xapi_hostname>[^\\|]+)?\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]\\|]+)\\]( (?<body>.*))?$",
         "module-format" : false
       }
     },
@@ -73,6 +73,10 @@
       {
         "line" : "Jun 11 09:46:12 localhost xenopsd-xc: message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]",
         "level" : "debug"
+      },
+      {
+        "line": "Mar  1 00:40:12 somehostname xapi: [debug||169 heartbeat|Heartbeat D:5816bb69a000|stunnel] stunnel start",
+        "level":"debug"
       }
     ]
   },
@@ -83,7 +87,7 @@
     "file-pattern" : ".*\\/((xensource|audit|daemon)\\.log|syslog)(\\..+)?",
     "regex" : {
       "xensource_log" : {
-        "pattern" : "\\[((?<xapi_timestamp>[^\\[\\|]+)\\|)?(?<level>[^\\[\\|]+)\\|(?<xapi_hostname>[^\\|]+)\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]\\|]+)\\]( (?<body>.*))?",
+        "pattern" : "\\[((?<xapi_timestamp>[^\\[\\|]+)\\|)?(?<level>[^\\[\\|]+)\\|(?<xapi_hostname>[^\\|]+)?\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]\\|]+)\\]( (?<body>.*))?",
         "module-format" : true
       }
     },
@@ -138,6 +142,9 @@
       },
       {
         "line" : " message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]"
+      },
+      {
+        "line" : " message repeated 25 times: [ [debug||0 ||xenops_server] Adding a new worker to the thread pool]"
       }
     ]
   },
@@ -177,6 +184,7 @@
         "line" : "[Thread-21244] [VERBOSE] [2019-07-13 16:42:01 UTC] Trying to remove DVSC. (None)",
         "level" : "debug"
       }
+
     ],
     "highlights" : {
       "progress": {
