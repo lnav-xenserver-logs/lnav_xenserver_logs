@@ -1,3 +1,4 @@
+#! /usr/bin/env lnav -i
 {
   "xensource_log" : {
     "title" : "xensource.log",
@@ -145,6 +146,47 @@
       },
       {
         "line" : " message repeated 25 times: [ [debug||0 ||xenops_server] Adding a new worker to the thread pool]"
+      }
+    ]
+  },
+  "xha_log": {
+    "title" : "xha.log",
+    "description": "High Availability's daemon log file",
+    "url" : "https://github.com/lnav-xenserver-logs/lnav_xenserver_logs",
+    "file-pattern" : ".*\\/xha.log(\\..+)?",
+    "regex" : {
+      "xha_log" : {
+        "pattern" : "^(?<timestamp>\\w+ \\d{2} \\d{2}:\\d{2}:\\d{2} \\w+ \\d{4}) \\[(?<level>\\w+)\\] (?<body>.*)",
+        "module-format" : true
+      }
+    },
+    "json" : false,
+    "timestamp-format" : ["%M %d %H:%M:%S UTC %Y"],
+    "level-field" : "level",
+    "level" : {
+      "error" : "error|err",
+      "warning" : "warning|warn",
+      "notice" : "notice",
+      "info" : "info",
+      "debug" : "debug"
+    },
+    "multiline" : false,
+    "sample" : [
+      {
+        "line" : "Jun 01 19:35:50 UTC 2022 [debug] HB: HB domain is updated [hbdomain = (0@m)].",
+        "level" : "debug"
+      },
+      {
+        "line" : "Jun 01 20:37:50 UTC 2022 [info] CONF: my_index=2 num_host=3 t1=3 T1=60 t2=3 T2=60 Wh=60 Ws=75 Tboot=120 Tenable=120 tXapi=60 TXapi=120 RestartXapi=1 TRestartXapi=300 Tlicence=30",
+        "level" : "info"
+      },
+      {
+        "line" : "Jun 01 20:37:50 UTC 2022 [notice] HA daemon started - built at Dec  9 15:40:06 UTC 2021 -", 
+        "level" : "notice"
+      },
+      {
+        "line" : "Jun 01 20:38:00 UTC 2022 [warn] BM: cannot open bonding status file (/proc/net/bonding/eth0). (2)",
+        "level" : "warning"
       }
     ]
   },
