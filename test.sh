@@ -3,11 +3,8 @@
 
 set -uex
 
-# This branch and test is for the 0.8.X versions of lnav
-[[ "$(lnav -V)" == lnav\ 0.8* ]]
-
 # If we have the latest lnav version, check that there are no warnings
-test "$(lnav -V)" == "lnav 0.8.5" && \
+[[ "$(lnav -V)" == lnav\ 0.10.* ]] && \
   (! (lnav -C |& grep "^warning:"))
 
 lnav -C
@@ -20,7 +17,8 @@ lnav -C
 # because there is not year in this timestamp format so lnav figures out the date based on the file's timestamp.
 touch ./test/xensource_log/main_format/xensource.log
 lnav -qn -c ';select log_time,log_hostname,log_procname,xapi_timestamp,log_level,xapi_hostname,threadid,origin,task,module from xensource_log' -c ':write-csv-to /tmp/out.csv' ./test/xensource_log/main_format/xensource.log
-diff /tmp/out.csv test/xensource_log/main_format/expected_matches.csv
+sed "s/#year#/$(date +%Y)/" test/xensource_log/main_format/expected_matches.csv > /tmp/expected_matches.csv
+diff /tmp/out.csv /tmp/expected_matches.csv
 # Test the module format
 lnav -qn -c ';select xapi_timestamp,level,xapi_hostname,threadid,origin,task,module from xensource_log_module_format' -c ':write-csv-to /tmp/out.csv' ./test/xensource_log/module_format/syslog
 diff /tmp/out.csv test/xensource_log/module_format/expected_matches.csv
