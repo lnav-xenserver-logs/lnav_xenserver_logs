@@ -1,5 +1,6 @@
 #! /usr/bin/env lnav -i
 {
+  "$schema": "https://lnav.org/schemas/format-v1.schema.json",
   "xensource_log" : {
     "title" : "xensource.log",
     "description" : "XenServer logs stored in /var/log/xensource.log",
