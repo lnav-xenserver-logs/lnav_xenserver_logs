@@ -198,7 +198,7 @@
     "file-pattern" : "xenrt.log",
     "regex" : {
       "xenrt_log" : {
-        "pattern" : "^(?<threadid>\\[Thread-[^\\[\\]]*\\] )?\\[(?<level>[^\\]\\[]+)\\] \\[(?<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} UTC)\\] (?<body>.*)",
+        "pattern" : "^(?<threadid>\\[[^\\[\\]]*\\] )?(?<hostname>\\[[a-z0-9\\-]+\\] )?\\[(?<level>[^\\]\\[]+)\\] \\[(?<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} UTC)\\] (?<body>.*)",
         "module-format" : false
       }
     },
@@ -218,9 +218,19 @@
       "debug" : "VERBOSE|HTCHECK"
     },
     "multiline" : true,
+    "value" : {
+      "hostname" : {
+        "kind" : "string",
+        "identifier" : true
+      }
+    },
     "sample" : [
       {
         "line" : "[VERBOSE] [2018-11-17 16:54:02 UTC] Setting MainThread TEC to TEC:TCCBTNBDBlockVerify",
+        "level" : "debug"
+      },
+      {
+        "line" : "[HWorker00] [host5-05] [VERBOSE] [2024-11-07 14:28:33 UTC] Local command: ls",
         "level" : "debug"
       },
       {
