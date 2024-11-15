@@ -198,7 +198,7 @@
     "file-pattern" : "xenrt.log",
     "regex" : {
       "xenrt_log" : {
-        "pattern" : "^(?<threadid>\\[Thread-[^\\[\\]]*\\] )?\\[(?<level>[^\\]\\[]+)\\] \\[(?<timestamp>[^\\[\\]]+)\\] (?<body>.*)",
+        "pattern" : "^(?<threadid>\\[Thread-[^\\[\\]]*\\] )?\\[(?<level>[^\\]\\[]+)\\] \\[(?<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} UTC)\\] (?<body>.*)",
         "module-format" : false
       }
     },
