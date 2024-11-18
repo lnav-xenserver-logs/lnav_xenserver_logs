@@ -4,10 +4,13 @@
 set -uex
 
 # If we have the latest lnav version, check that there are no warnings
-[[ "$(lnav -V)" == lnav\ 0.10.* ]] && \
-  (! (lnav -C |& grep "^warning:"))
+CURR_VERSION=$(lnav -V | sed -e 's/lnav //')
 
-lnav -C
+if [[ $(echo -e "0.10.0\n$CURR_VERSION" | sort -V | head -n1) != "$CURR_VERSION" ]]; then
+  (! (lnav -C |& grep "^warning:"))
+else
+  lnav -C
+fi
 
 # Test that the different fields are extracted correctly
 
