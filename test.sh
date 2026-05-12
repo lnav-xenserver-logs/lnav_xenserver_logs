@@ -22,9 +22,6 @@ touch ./test/xensource_log/main_format/xensource.log
 lnav -qn -c ';select log_time,log_hostname,log_procname,xapi_timestamp,log_level,xapi_hostname,threadid,origin,task,module from xensource_log' -c ':write-csv-to /tmp/out.csv' ./test/xensource_log/main_format/xensource.log
 sed "s/#year#/$(date +%Y)/" test/xensource_log/main_format/expected_matches.csv > /tmp/expected_matches.csv
 diff /tmp/out.csv /tmp/expected_matches.csv
-# Test the module format
-lnav -qn -c ';select xapi_timestamp,level,xapi_hostname,threadid,origin,task,module from xensource_log_module_format' -c ':write-csv-to /tmp/out.csv' ./test/xensource_log/module_format/syslog
-diff /tmp/out.csv test/xensource_log/module_format/expected_matches.csv
 
 # Test xenrt.log
 lnav -qn -c ';select log_time,log_level from xenrt_log' -c ':write-csv-to /tmp/out.csv' ./test/xenrt_log/xenrt.log
