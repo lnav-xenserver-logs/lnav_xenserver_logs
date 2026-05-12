@@ -82,74 +82,6 @@
       }
     ]
   },
-  "xensource_log_module_format" : {
-    "title" : "xensource.log",
-    "description" : "XenServer logs stored in /var/log/xensource.log",
-    "url" : "https://github.com/xapi-project/xcp-idl/blob/master/lib/debug.ml#L110",
-    "file-pattern" : ".*\\/((xensource|audit|daemon)\\.log|syslog)(\\..+)?",
-    "regex" : {
-      "xensource_log" : {
-        "pattern" : "\\[((?<xapi_timestamp>[^\\[\\|]+)\\|)?(?<level>[^\\[\\|]+)\\|(?<xapi_hostname>[^\\|]+)?\\|(?<threadid>\\d+) (?<origin>[^\\|]+)?\\|(?<task>[^\\|]+)?\\|(?<module>[^\\]\\|]+)\\]( (?<body>.*))?",
-        "module-format" : true
-      }
-    },
-    "json" : false,
-
-    "level-field" : "level",
-    "body-field" : "body",
-    "opid-field" : "task",
-
-    "level" : {
-      "error" : "error",
-      "warning" : "warn",
-      "info" : "info",
-      "debug" : "debug"
-    },
-    "multiline" : false,
-    "value" : {
-      "xapi_timestamp" : {
-        "kind" : "string",
-        "identifier" : false
-      },
-      "level" : {
-        "kind" : "string",
-        "identifier" : false
-      },
-      "xapi_hostname" : {
-        "kind" : "string",
-        "collate" : "ipaddress",
-        "identifier" : true
-      },
-      "threadid" : {
-        "kind" : "integer",
-        "identifier" : true,
-        "foreign-key" : true
-      },
-      "origin" : {
-        "kind" : "string",
-        "identifier" : false
-      },
-      "task" : {
-        "kind" : "string",
-        "identifier" : false
-      },
-      "module" : {
-        "kind" : "string",
-        "identifier" : true
-      }
-    },
-    "sample" : [
-      {
-        "line" : " [debug|dt14|6380 UNIX /var/lib/xcp/xapi|host.signal_networking_change D:4f4b1253f01a|helpers] Updating IP addresses in DB for DHCP and autoconf PIFs"
-      },
-      {
-        "line" : " message repeated 25 times: [ [debug|localhost|0 ||xenops_server] Adding a new worker to the thread pool]"
-      },
-      {
-        "line" : " message repeated 25 times: [ [debug||0 ||xenops_server] Adding a new worker to the thread pool]"
-      }
-    ]
-  },
   "xha_log": {
     "title" : "xha.log",
     "description": "High Availability's daemon log file",
@@ -162,7 +94,7 @@
       }
     },
     "json" : false,
-    "timestamp-format" : ["%M %d %H:%M:%S UTC %Y"],
+    "timestamp-format" : ["%b %d %H:%M:%S UTC %Y"],
     "level-field" : "level",
     "level" : {
       "error" : "error|err",
@@ -182,7 +114,7 @@
         "level" : "info"
       },
       {
-        "line" : "Jun 01 20:37:50 UTC 2022 [notice] HA daemon started - built at Dec  9 15:40:06 UTC 2021 -", 
+        "line" : "Jun 01 20:37:50 UTC 2022 [notice] HA daemon started - built at Dec  9 15:40:06 UTC 2021 -",
         "level" : "notice"
       },
       {
