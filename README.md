@@ -1,4 +1,4 @@
-# lnav format file for Citrix Hypervisor (formerly XenServer) logs
+# lnav format file for Citrix XenServer (formerly Citrix Hypervisor (formerly XenServer)) logs
 [![Build Status](https://travis-ci.org/lnav-xenserver-logs/lnav_xenserver_logs.svg?branch=master)](https://travis-ci.org/lnav-xenserver-logs/lnav_xenserver_logs)
 
 This is a [lnav](http://lnav.org/) [format
