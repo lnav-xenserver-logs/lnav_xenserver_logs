@@ -162,7 +162,7 @@
       }
     },
     "json" : false,
-    "timestamp-format" : ["%M %d %H:%M:%S UTC %Y"],
+    "timestamp-format" : ["%b %d %H:%M:%S UTC %Y"],
     "level-field" : "level",
     "level" : {
       "error" : "error|err",
